@@ -4,7 +4,6 @@
 
 	&__title {
 		margin-bottom: 50px;
-		/*border-bottom: 1px solid #FF8181;*/
 		animation-delay: 1.5s;
 	}
 	&__row {
@@ -27,15 +26,6 @@
 		font-weight: 500;
 		font-size: 46px;
 		pointer-events: none;
-	}
-	&__image {
-		height: inherit;
-		width: inherit;
-		opacity: 0.5;
-		background: url('images/palisades.png') center;
-	}
-	&__image:hover {
-		background: url('images/palisadesGif.gif') center;
 	}
 	&__description {
 		margin-top: 25px;
