@@ -1,139 +1,32 @@
-
 body {
 	margin: 0px;
 	font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	/*background-color: #6b53cb;*/
-	/*background-color: #e6eeff;*/
+	/*color: #e6eeff;*/
 	/*background-color: #1d4053;*/
-	/*background-color: #ff3535;*/
-	/*background-color: #fdf6e3;*/
-	background-color: #3A3C83;
 	/*color: #ff3535;*/
-	/*color: #2aa198;*/
+	background-color: #3A3C83;
 	color: #FF8181;
+	/*background-color: #FFFFFF;*/
+	/*color: #000000;*/
+	/*background-color: #fdf6e3;*/
+	/*color: #2aa198;*/
 }
 
 #container {
-
 }
-
-header {
-	margin-top: 30px;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 20px;
-}
-	#name {
-		font-size: 20px;
-		font-weight: 400;
-		letter-spacing: 2px;
-		line-height: 22px;
-	}
-	.last {
-		margin-left: 36px;
-	}
-
-	nav {
-	}
-	.navList {
-		display: flex;
-		flex-flow: row nowrap;
-		margin: 0px;
-		list-style: none;
-		padding: 0px;
-		font-size: 18px;
-		letter-spacing: 2px;
-	}
-	.navItem {
-		margin-left: 40px;
-	}
-
-
-#title {
-	margin-top: 200px;
-	font-size: 110px;
-	font-weight: 400;
-	line-height: 100px;
-}
-	.line {
-		animation-delay: 1s;
-	}
-
-main {
-	margin-top: 200px;
-	font-size: 18px;
-}
-	.work {
-		padding-bottom: 5px;
-		border-bottom: 1px solid #FF8181;
-		animation-delay: 2s;
-	}
-
-
-footer {
-
-}
-
 
 @media(min-width: 756px) {
 	#container {
-		width: 75%;
+		width: 70%;
+		max-width: 900px;
 		margin: auto;
 	}
 }
 
-
-@keyframes fadeInDown { 
-    0% { 
-        opacity: 0; 
-        transform: translateY(-20px); 
-    } 
-    100% { 
-        opacity: 1; 
-        transform: translateY(0); 
-    } 
-}
-@keyframes fadeInLeft { 
-    0% { 
-        opacity: 0; 
-        transform: translateX(-20px); 
-    } 
-    100% { 
-        opacity: 1; 
-        transform: translateX(0); 
-    } 
-}
-@keyframes fadeInRight { 
-    0% { 
-        opacity: 0; 
-        transform: translateX(20px); 
-    } 
-    100% { 
-        opacity: 1; 
-        transform: translateX(0); 
-    } 
-}
-.animation { 
-    -webkit-animation-duration: .8s; 
-    animation-duration: .8s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-    -webkit-animation-timing-function: ease-in-out; 
-    animation-timing-function: ease-in-out; 
-}
-.fadeUp {
-	-webkit-animation-name: fadeInDown; 
-	animation-name: fadeInDown;
-}
-.fadeLeft {
-	-webkit-animation-name: fadeInLeft; 
-	animation-name: fadeInLeft;
-}
-.fadeRight {
-	-webkit-animation-name: fadeInRight; 
-	animation-name: fadeInRight;
-}
+@import "header";
+@import "jumbo";
+@import "projects";
+@import "animation";
