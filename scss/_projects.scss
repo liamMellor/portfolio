@@ -12,11 +12,24 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 50px 0px;
-		border-top: 1px solid rgba(255,129,129,0.5);
+		-webkit-transition-property: padding-bottom;
+		-webkit-transition-duration: 2s;
+		transition-property: padding-bottom;
+		transition-duration: 2s;
+		// border-top: 1px solid rgba(255,129,129,0.5);
+		// border-top: 1px solid $primary;
+		border-top: 1px solid rgba(42, 161, 152, 0.5);
 		cursor: pointer;
+	}
+	&__row--open {
+		padding-bottom: 200px;
 	}
 	&__name {
 		font-weight: 500;
 		font-size: 32px;
+		flex: 1 1 50%;
+	}
+	&__description {
+		flex: 1 1 50%;
 	}
 }

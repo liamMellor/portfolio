@@ -1,21 +1,27 @@
+@import "variables";
+@import "header";
+@import "jumbo";
+@import "projects";
+@import "animation";
+
 body {
 	margin: 0px;
 	font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	/*background-color: #6b53cb;*/
-	/*color: #e6eeff;*/
-	/*background-color: #1d4053;*/
-	/*color: #ff3535;*/
-	background-color: #3A3C83;
-	color: #FF8181;
-	/*background-color: #FFFFFF;*/
-	/*color: #000000;*/
-	/*background-color: #fdf6e3;*/
-	/*color: #2aa198;*/
+	background-color: $background;
+	color: $primary;
 }
 
 #container {
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 @media(min-width: 756px) {
@@ -25,8 +31,3 @@ body {
 		margin: auto;
 	}
 }
-
-@import "header";
-@import "jumbo";
-@import "projects";
-@import "animation";
