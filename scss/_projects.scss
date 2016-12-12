@@ -1,33 +1,22 @@
 .projects {
 	margin-top: 200px;
 	font-size: 18px;
-
+	&__title, &__row {
+		animation-delay: 1.5s;
+	}
 	&__title {
 		margin-bottom: 50px;
-		animation-delay: 1.5s;
 	}
 	&__row {
-		padding-top: 50px;
-		margin-bottom: 50px;
-		animation-delay: 1.5s;
-		border-top: 1px solid rgba(255,129,129,0.5)
-	}
-	&__main {
-		position: relative;
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		height: 300px;
-		width: 100%;
+		justify-content: space-between;
+		padding: 50px 0px;
+		border-top: 1px solid rgba(255,129,129,0.5);
+		cursor: pointer;
 	}
 	&__name {
-		z-index: 1;
-		position: absolute;
 		font-weight: 500;
-		font-size: 46px;
-		pointer-events: none;
-	}
-	&__description {
-		margin-top: 25px;
+		font-size: 32px;
 	}
 }
