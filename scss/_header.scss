@@ -1,8 +1,7 @@
 .header {
-	margin-top: 20px;
+	margin-top: 30px;
 	display: flex;
 	flex-flow: row nowrap;
-	align-items: center;
 	justify-content: space-between;
 	font-size: 20px;
 	&__name {
@@ -11,14 +10,9 @@
 		letter-spacing: 2px;
 		line-height: 22px;
 	}
-	&__name--last {
-		margin-left: 37px;
-	}
 	&__nav {
-	}
-	&__nav__list {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: column nowrap;
 		margin: 0px;
 		list-style: none;
 		padding: 0px;
@@ -26,6 +20,23 @@
 		letter-spacing: 2px;
 	}
 	&__nav__item {
-		margin-left: 40px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	@media (min-width: $phone) {
+		align-items: center;
+		&__nav {
+			flex-flow: row nowrap;
+		}
+		&__nav__item {
+			margin: 0px 0px 0px 40px;
+		}
+	}
+
+	@media (min-width: $tablet) {
+		margin-top: 15px;
 	}
 }

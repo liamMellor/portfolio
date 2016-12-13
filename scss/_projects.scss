@@ -1,13 +1,14 @@
 .projects {
-	margin-top: 200px;
+	margin-top: 140px;
 	font-size: 18px;
 	&__title, &__row {
 		animation-delay: 1.5s;
 	}
 	&__title {
-		margin-bottom: 50px;
+		margin-bottom: 25px;
 	}
 	&__row {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -31,5 +32,15 @@
 	}
 	&__description {
 		flex: 1 1 50%;
+	}
+	&__screen {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50px;
+	}
+
+	@media (min-width: $tablet) {
+		margin-top: 200px;
 	}
 }
