@@ -10,6 +10,7 @@
 	&__row {
 		position: relative;
 		display: flex;
+		height: 44px;
 		align-items: center;
 		justify-content: space-between;
 		padding: 50px 0px;
@@ -17,9 +18,9 @@
 		-webkit-transition-duration: 2s;
 		transition-property: padding-bottom;
 		transition-duration: 2s;
-		// border-top: 1px solid rgba(255,129,129,0.5);
+		border-top: 1px solid rgba(255,129,129,0.5);
 		// border-top: 1px solid $primary;
-		border-top: 1px solid rgba(42, 161, 152, 0.5);
+		// border-top: 1px solid rgba(42, 161, 152, 0.5);
 		cursor: pointer;
 	}
 	&__row--open {
@@ -28,10 +29,11 @@
 	&__name {
 		font-weight: 500;
 		font-size: 32px;
-		flex: 1 1 50%;
+		flex: 1 1 60%;
 	}
 	&__description {
-		flex: 1 1 50%;
+		flex: 1 1 40%;
+		padding-left: 25px;
 	}
 	&__screen {
 		position: absolute;
@@ -42,5 +44,11 @@
 
 	@media (min-width: $tablet) {
 		margin-top: 200px;
+		&__name {
+			flex: 1 1 55%;
+		}
+		&__description {
+			flex: 1 1 45%;
+		}
 	}
 }
