@@ -18,9 +18,7 @@
 		-webkit-transition-duration: 2s;
 		transition-property: padding-bottom;
 		transition-duration: 2s;
-		border-top: 1px solid rgba(255,129,129,0.5);
-		// border-top: 1px solid $primary;
-		// border-top: 1px solid rgba(42, 161, 152, 0.5);
+		border-top: 1px solid $primary-light;
 		cursor: pointer;
 	}
 	&__row--open {
