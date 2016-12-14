@@ -7,6 +7,18 @@
 	&__title {
 		margin-bottom: 25px;
 	}
+	&__rows {
+		&--active {
+			.projects__row {
+				transition: color 0.3s ease;
+				color: $primary-light;
+			}
+			.projects__row--active {
+				transition: color 0.3s ease;
+				color: $primary;
+			}
+		}
+	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
@@ -14,13 +26,8 @@
 		padding: 50px 0px;
 		border-top: 1px solid $primary-light;
 		cursor: pointer;
-		-webkit-transition-property: padding-bottom;
-		-webkit-transition-duration: 2s;
-		transition-property: padding-bottom;
-		transition-duration: 2s;
-	}
-	&__row--open {
-		padding-bottom: 200px;
+		transition: color 0.3s ease;
+		color: $primary;
 	}
 	&__name {
 		font-weight: 500;
@@ -31,12 +38,7 @@
 		flex: 1 1 40%;
 		padding-left: 1px;
 	}
-	&__screen {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 50px;
-	}
+
 
 	@media (min-width: $phone) {
 		&__row {
