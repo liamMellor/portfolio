@@ -1,0 +1,68 @@
+.projectPage {
+	border-top: 1px solid $primary-light;
+	font-size: $primary-font;
+	&__window {
+		padding: 25px;
+		border-top: 1px solid $primary-light;
+	}
+		&__mac {
+			position: relative;
+			height: 24px;
+			background-color: #DDDDDD;
+			color: #000000;
+			font-size: 11px;
+			line-height: 22px;
+			letter-spacing: 0.5px;
+			text-align: center;
+			&__button {
+				position: absolute;
+				display: inline-block;
+				height: 12px;
+				width: 12px;
+				top: 6px;
+				border-radius: 50%;
+				&.red {
+					background-color: #ff5f57;
+					left: 10px;
+				}
+				&.yellow {
+					background-color: #ffbd2e;
+					left: 26px;
+				}
+				&.green {
+					background-color: #28ca41;
+					left: 42px;
+				}
+			}
+		}
+		&__image {
+			height: 400px;
+			width: inherit;
+			&.palisades {
+				background: url('images/palisades.png') no-repeat;
+				background-size: cover;
+			}
+			&.mc {
+				background: url('images/mc.png') no-repeat;
+				background-size: cover;
+			}
+			&.zola {
+				background: url('images/zola.png') no-repeat;
+				background-size: cover;
+			}
+			&.audio {
+				background: url('images/audio.png') no-repeat;
+				background-size: cover;
+			}
+		}
+	&__description {
+		padding: 25px;
+		list-style-type: circle;
+		li {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}

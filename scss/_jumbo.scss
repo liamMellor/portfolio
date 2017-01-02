@@ -1,5 +1,5 @@
 .jumbo {
-	margin-top: 68px;
+	margin: 68px 0px 140px;
 	font-size: 58px;
 	line-height: 58px;
 	font-weight: 500;
@@ -8,14 +8,20 @@
 	}
 
 	@media (min-width: $phone) {
-		margin-top: 100px;
+		margin: 100px 0px 140px;
 		font-size: 58px;
 		line-height: 58px;
 	}
 
 	@media (min-width: $tablet) {
-		margin-top: 200px;
+		margin: 200px 0px;
 		font-size: 110px;
 		line-height: 110px;
+		&--secondary {
+			font-size: 80px;
+			line-height: 80px;
+			padding-left: 25px;
+
+		}
 	}
 }

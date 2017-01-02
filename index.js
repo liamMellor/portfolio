@@ -1,3 +1,7 @@
+// Start user at top of page
+window.scrollTo(0,0);
+
+
 // ACTIVE ROWS
 var rowsContainer = document.getElementsByClassName('projects__rows');
 var rowsContainer = rowsContainer[0];
@@ -14,14 +18,5 @@ Array.prototype.forEach.call(rows, function(element) {
 	});
 	element.addEventListener("mouseleave", function() {
 		element.classList.remove('projects__row--active');
-	});
-});
-
-
-// OPEN AND CLOSE ROWS
-Array.prototype.forEach.call(rows, function(element) {
-	element.addEventListener("click", function() {
-		var classes = element.classList;
-		classes.contains('projects__row--open') ? classes.remove('projects__row--open') : classes.add('projects__row--open');
 	});
 });

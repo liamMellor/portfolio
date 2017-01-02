@@ -1,6 +1,5 @@
 .projects {
-	margin-top: 140px;
-	font-size: 18px;
+	font-size: $primary-font;
 	&__title, &__row {
 		animation-delay: 1.5s;
 	}
@@ -10,32 +9,26 @@
 	&__rows {
 		&--active {
 			.projects__row {
-				transition: padding-bottom 1.5s, color 0.3s;
 				color: $primary-light;
 			}
 			.projects__row--active {
-				transition: padding-bottom 1.5s, color 0.3s;
 				color: $primary;
 			}
 		}
 	}
 	&__row {
+		display: block;
 		padding: 50px 0px;
 		border-top: 1px solid $primary-light;
 		cursor: pointer;
-		overflow: hidden;
-		transition: padding-bottom 1.5s, color 0.3s;
 		color: $primary;
-	}
-	&__row--open {
-		padding-bottom: 650px;
-		color: $primary !important;
+		text-decoration: none !important;
+		transition: color 0.3s;
 	}
 	&__innerRow {
 		display: flex;
 		justify-content: space-between;
 		flex-flow: column nowrap;
-		margin-bottom: 50px;
 	}
 	&__name {
 		font-weight: 500;
@@ -45,63 +38,6 @@
 	&__description {
 		flex: 1 1 40%;
 		padding-left: 1px;
-	}
-	&__window {
-	}
-	&__mac {
-		position: relative;
-		height: 24px;
-		background-color: #DDDDDD;
-		color: #000000;
-		font-size: 11px;
-		line-height: 22px;
-		letter-spacing: 0.5px;
-		text-align: center;
-		&__button {
-			position: absolute;
-			display: inline-block;
-			height: 12px;
-			width: 12px;
-			top: 6px;
-			border-radius: 50%;
-			&.red {
-				background-color: #ff5f57;
-				left: 10px;
-			}
-			&.yellow {
-				background-color: #ffbd2e;
-				left: 26px;
-			}
-			&.green {
-				background-color: #28ca41;
-				left: 42px;
-			}
-		}
-	}
-	&__image {
-		height: 400px;
-		width: inherit;
-		&.palisades {
-			background: url('images/palisades.png') no-repeat;
-			background-size: cover;
-		}
-		&.mc {
-			background: url('images/mc.png') no-repeat;
-			background-size: cover;
-		}
-		&.zola {
-			background: url('images/zola.png') no-repeat;
-			background-size: cover;
-		}
-		&.audio {
-			background: url('images/audio.png') no-repeat;
-			background-size: cover;
-		}
-	}
-	&__hiddenDescription {
-		padding: 20px;
-		margin-top: 20px;
-		border: 1px dashed $primary;
 	}
 
 	@media (min-width: $phone) {
@@ -119,7 +55,6 @@
 	}
 
 	@media (min-width: $tablet) {
-		margin-top: 200px;
 		&__name {
 			flex: 1 1 55%;
 		}
