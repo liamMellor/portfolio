@@ -1,0 +1,12 @@
+.footer {
+	margin: 100px 0px 25px;
+	display: flex;
+	justify-content: space-between;
+	animation-delay: 1.5s;
+	&__item {
+		margin-left: 25px;
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+}
