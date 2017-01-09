@@ -1,0 +1,262 @@
+html, body {
+	margin: 10px 0px;
+	padding: 0;
+	padding-left: 45px;
+	background-color: #3D3D3D;
+}
+
+.container {
+	height: 785px; /* + 30 */
+	width: 2280px; /* 2330 */
+	margin-top: 20px;	
+	margin: auto;
+	border-left: none;
+	border-top: none;
+	position: relative;
+}
+
+/*****************/
+/* MIXER */
+/*****************/
+
+#mixer-wrapper {
+	float: left;
+}
+
+#mixer {
+	height: 740px; /* 100% */
+	width: 1200px;
+	margin: auto;
+	background-color: #DEE1E0;
+	top: 0px;
+	left: 0px;
+}
+
+#left {
+	float: left;
+	height: 618px;
+	width: 970px;
+	visibility: hidden;
+}
+
+#right {
+	float: left;
+	height: 618px;
+	width: 230px;
+}
+
+/*****************/
+/* HEAD */
+/*****************/
+
+#head {
+	height: 120px;
+	width: 1200px;
+	border-bottom: 2px solid #E9ECEB;
+	text-align: center;
+}
+
+#head h1 {
+	margin-top: 0px;
+	padding-top: 48px;
+	color: #9B0407;
+	font-family: Helvetica;
+}
+
+button p {
+	margin: 0px;
+}
+/*****************/
+/* CHANNEL */
+/*****************/
+
+.channel {
+	height: 100%;
+	width: 137px;
+	float: left;
+	background-color: #D7D8D2;
+	border-right:2px solid #E9ECEB;
+}
+
+.channel:last-child {
+	border-right: none;
+	width: 136px;
+}
+
+.channelHead {
+	height: 15%;
+	background-color: #BEC1C0;
+	text-align: center;
+}
+
+.channelHead h4 {
+	margin: 0;
+	padding-top: 10px; 
+	color: #E9ECEB;
+}
+
+.channelHead .upload {
+	width: 60%;
+	margin-top: 5px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	background-color: #E9ECEB;
+}
+
+.channelHead .channelName {
+	width: 82%;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #D3A30F;	
+}
+
+.channelBody {
+	height: 60%;
+	text-align: center;
+}
+
+.channelBody .potWrapper {
+	padding-top: 34px;
+	position: relative;
+}
+
+.channelBody .pot {
+	margin: auto;
+	border-radius: 100px;
+	height: 46px;
+	width: 46px;
+	background-color: #E9ECEB;
+	display: inline-block;
+}
+
+.channelBody .pot hr {
+	width: 1px;
+	height: 16px;
+	border-style: solid;
+	border-color: #D3A30F;
+	color: #D3A30F;
+	background-color: #D3A30F;
+	border-radius: 20px;
+}
+
+.channelBody .minus, .plus {
+	position: absolute;
+	top: 32px;
+	left: 29px;
+	font-size: 18px;
+	color: #3D3D3D;
+	cursor: pointer;
+}
+
+.channelBody .plus {
+	top: 31px;
+	left: 102px;
+}
+
+.channelFoot {
+	height: 25%;
+	background-color: #BEC1C0;
+	text-align: center;
+	position: relative;
+}
+
+.channelFoot .playPause, .channelFoot .playPause1  {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 24px solid #dee1e0;
+	top: 58px;
+	left: 24px;
+}
+
+.channelFoot .playPause1 {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 24px solid #dee1e0;
+	top: 179px;
+	left: 38px;
+}
+
+.channelFoot .reset {
+	position: absolute;
+	width: 70px; 
+	height: 20px;
+	bottom: 70px;
+	left: 140px; 
+	background-color: #DEE1E0; 
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.channelFoot .pauseAll {
+	position: absolute;
+	margin-left: 6px;
+	bottom: 17px;
+	left: 27px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.channelFoot .pauseAll hr {
+	width: 0; 
+	height: 0; 
+	display: inline-block;
+	width: 10px;
+	height: 32px;
+	margin-left: 5px;
+	border: none;
+	background-color: #D3A30F;
+}
+
+.channelFoot input[type=range][orient=vertical] {
+    -webkit-appearance: slider-vertical; /* WebKit */
+    margin-top: 25px;
+    width: 8px;
+    height: 100px;
+}
+
+.channelFoot input[type=range][orient=vertical]::-webkit-slider-runnable-track {
+	background: #DEE1E0;
+	border-radius: 10px;
+}
+
+#masterFader {
+	height: 252px;
+	margin-top: 30px;
+}
+
+/*****************/
+/* MASTER CHANNEL */
+/*****************/
+
+#masterChannel {
+	height: 100%;
+	width: 228px;
+	border-left: 2px solid #E9ECEB;
+}
+
+#masterChannel .channelBody {
+	height: 307px;
+	background-color: #D7D8D2;
+	text-align: center;
+}
+
+#masterChannel .channelFoot {
+	height: 311px;
+	background-color: #BEC1C0;
+	text-align: center;
+}
+
+/*****************/
+/** Directions ***/
+/*****************/
+
+

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"> 
+	<title>Web Audio Mixer</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="outBoardGear.css">
+	<link rel="stylesheet" type="text/css" href="3dEffects.css">
+	<script src="bufferLoader.js"></script>
+	<script src="components.js"></script>
+	<script src="outboard.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div class="container">
+
+		<div id="mixer-wrapper">
+			<div id="mixer">
+				<div id="head">	
+					<h1>Practice Your Mixing Skills!</h1>
+				</div>
+				<div id="left">
+					<div class="channel"> 
+						<div class="channelHead">
+							<h4>1</h4>
+							<button class="upload"><p id="name0">Kick</p></button>
+							<input class="channelName" readonly>
+						</div> 
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="0" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="0" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="0" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="0" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>				
+						</div>
+						<div class="channelFoot">
+							<div data-channel="0" class="playPause" onclick="playPause(this)"></div>
+							<input data-channel="0" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>2</h4>
+						 	<button class="upload"><p id="name1">Snare</p></button>
+						 	<input class="channelName" readonly>
+						 </div>
+						 <div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="1" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="1" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="1" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="1" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>	
+						</div>
+						<div class="channelFoot">
+							<div data-channel="1" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="1" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>3</h4>
+						 	<button class="upload"><p id="name2">Bass / Synth</p></button>
+						 	<input class="channelName" readonly>
+						</div>
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="2" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="2" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="2" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="2" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>	
+						</div>
+						<div class="channelFoot">
+							<div data-channel="2" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="2" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>4</h4>
+						 	<button class="upload" ><p id="name3">Chords</p></button>
+						 	<input class="channelName" readonly>
+						</div>
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="3" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="3" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="3" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="3" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>		
+						</div>
+						<div class="channelFoot">
+							<div data-channel="3" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="3" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>5</h4>
+						 	<button class="upload" ><p id="name4">Horns</p></button>
+						 	<input class="channelName" readonly>
+						</div>
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="4" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="4" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="4" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="4" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>	
+						</div>
+						<div class="channelFoot">
+							<div data-channel="4" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="4" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>6</h4>
+						 	<button class="upload"><p id="name5">Back Vocal</p></button>
+						 	<input class="channelName" readonly>
+						</div>
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="5" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="5" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="5" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="5" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>	
+						</div>
+						<div class="channelFoot">
+							<div data-channel="5" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="5" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+					<div class="channel"> 
+						<div class="channelHead">
+						 	<h4>7</h4>
+						 	<button class="upload"><p id="name6">Main Vocal</p></button>
+						 	<input class="channelName" readonly>
+						</div>
+						<div class="channelBody">
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="6" data-pot="high"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+								</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="6" data-pot="mid"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="6" data-pot="bass"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>
+							<div class="potWrapper">
+								<span class="minus" onclick="minus(this)">-</span>
+								<div class="pot" data-channel="6" data-pot="pan"><hr></div>
+								<span class="plus" onclick="plus(this)">+</span>
+							</div>	
+						</div>
+						<div class="channelFoot">
+							<div data-channel="6" class="playPause" onclick="playPause(this)"></div>
+						 	<input data-channel="6" max="100" type="range" orient="vertical" oninput="getFaderValue(this)">
+						</div>
+					</div>
+				</div>
+
+				<div id="right">
+					<div id="masterChannel">
+						<div class="channelBody" id="bodyRight">
+							
+						</div>
+						<div class="channelFoot" id="footRight">
+							<div class="playPause1" id="masterPlayPause" onclick="playAll(this)"></div>
+							<div class="pauseAll" onclick="pauseAll(this)"><hr class="yellow"><hr class="yellow"></div>
+							<input data-channel="7" max="100" id="masterFader" type="range" orient="vertical" oninput="getFaderValue(this)">
+							<button class="reset" onclick="reset()">RESET</button>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div id="3dEffects">
+				<hr id="mixer_hr1">
+				<hr id="mixer_hr2">
+				<hr id="mixer_hr3">
+				<hr id="mixer_hr4">
+				<hr id="mixer_hr5">
+				<hr id="mixer_hr6">
+				<hr id="mixer_hr7">
+				<hr id="mixer_hr8">
+				<hr id="mixer_hr9">
+				<hr id="mixer_hr10">
+				<div id="verb3d"></div>
+				<hr id="mixer_hr11">
+				<hr id="mixer_hr12">
+				<hr id="mixer_hr11">
+				<hr id="mixer_hr12">
+				<hr id="mixer_hr13">
+				<hr id="mixer_hr14">
+				<hr id="mixer_hr15">
+				<hr id="mixer_hr16">
+				<hr id="mixer_hr17">
+				<hr id="mixer_hr18">
+				<div id="highText"><p>Highs</p></div>
+				<div id="midText"><p>Mids</p></div>
+				<div id="bassText"><p>Bass</p></div>
+				<div id="panText"><p>Pan</p></div>
+				<div id="highText2"><p>Highs</p></div>
+				<div id="midText2"><p>Mids</p></div>
+				<div id="bassText2"><p>Bass</p></div>
+				<div id="panText2"><p>Master</p></div>
+			</div>
+		</div> 
+		<!-- End of mixer -->
+
+		<div id="gear-wrapper">
+			<div id="gear">	
+
+				<div id="compressor" class="module">
+					<div id="bigPot"><hr></div>
+					<p id="littleFatty">Little Fatty </p>&nbsp<p>Compressor</p>
+				</div>
+
+				<div id="reverb" class="module">
+					<div id="reverbMiddle">
+						<div class="potWrapper">
+							<div class="pot" id="verbPot0" data-channel="0" data-pot="reverb"><hr></div>
+						</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot1" data-channel="1" data-pot="reverb"><hr></div>
+						</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot2" data-channel="2" data-pot="reverb"><hr></div>
+						</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot3" data-channel="3" data-pot="reverb"><hr></div>
+						</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot4" data-channel="4" data-pot="reverb"><hr></div>
+							</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot5" data-channel="5" data-pot="reverb"><hr></div>
+						</div>
+						<div class="potWrapper">
+							<div class="pot" id="verbPot6" data-channel="6" data-pot="reverb"><hr></div>
+						</div>	
+						<div id="reverbName_R">
+							<p>R</p>
+						</div>
+						<div id="reverbName_rest">
+							<p>everb</p>
+						</div>
+					</div>
+					<div id="reverbControls">
+						<div class="control">
+							<div class="reverbMinus" data-channel="0">-</div>
+							<div class="reverbPlus"  data-channel="0">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="1">-</div>
+							<div class="reverbPlus"  data-channel="1">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="2">-</div>
+							<div class="reverbPlus"  data-channel="2">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="3">-</div>
+							<div class="reverbPlus"  data-channel="3">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="4">-</div>
+							<div class="reverbPlus"  data-channel="4">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="5">-</div>
+							<div class="reverbPlus"  data-channel="5">+</div>
+						</div>
+						<div class="control">
+							<div class="reverbMinus" data-channel="6">-</div>
+							<div class="reverbPlus"  data-channel="6">+</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="eq" class="module">
+					<div id="left-eq">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<div id="eqHolder">
+							<div class="potWrapper" id="potWrapper0eq">
+								<div class="pot" data-channel="0" data-pot="reverb"><hr></div>
+							</div>
+							<div class="potWrapper" id="potWrapper1eq">
+								<div class="pot" data-channel="1" data-pot="reverb"><hr></div>
+							</div>
+							<div class="potWrapper" id="potWrapper2eq">
+								<div class="pot" data-channel="2" data-pot="reverb"><hr></div>
+							</div>
+							<div id="eqControls">
+								<div id="eqControl0" class="control">
+									<div class="eqMinus">-</div>
+									<div class="eqPlus">+</div>
+								</div>
+								<div id="eqControl1" class="control">
+									<div class="eqMinus">-</div>
+									<div class="eqPlus">+</div>
+								</div>
+								<div id="eqControl2" class="control">
+									<div class="eqMinus">-</div>
+									<div class="eqPlus">+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="middle-eq">
+						<div id="eqHolder2">
+							<div class="potWrapper" id="potWrapper2eq">
+								<div class="pot" data-channel="2" data-pot="reverb"><hr></div>
+							</div>
+							<div id="eqControls">
+								<div id="eqControl3" class="control">
+									<div class="eqMinus">-</div>
+									<div class="eqPlus">+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="right-eq">
+						<div id="eqModuleName">EQ Master <br> BIG BOOST</div>
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+						<hr class="verticalVent">
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- End of gear -->
+
+	</div>
+</body>
+
+</html>

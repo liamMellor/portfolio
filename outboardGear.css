@@ -1,0 +1,372 @@
+/*****************/
+/* Outboard Gear */
+/*****************/
+
+#gear-wrapper {
+	float: left;
+	margin-left: 105px;
+}
+
+#gear {
+	height: 730px; /* 100% */
+	width: 875px;
+}
+
+.module {
+	width: 825px;
+	height: 230px;
+	margin-bottom: 15px;
+	border: 2px solid;
+}
+
+.verticalVent {
+	width: 7px;
+	height: 150px;
+	border-style: solid;
+	border-color: #000000;
+	color: #000000;
+	background-color: #000000;
+	border-radius: 25px;
+	display: inline-block;
+	margin-left: 6px;
+}
+
+
+
+
+
+
+
+/*****************/
+/**** Reverb *****/
+/*****************/
+
+#reverb {
+	border-radius: 120px;
+	border-color: #3E7735;
+	background-color: #2E5927;
+	
+}
+
+#reverb .potWrapper {
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 80px;
+}
+
+#reverb .potWrapper:first-child {
+	margin-left: 30px;
+}
+
+#reverb .potWrapper .pot {
+	margin: auto;
+	border-radius: 100px;
+	height: 66px;
+	width: 66px;
+	background-color: #E9ECEB;
+	display: inline-block;
+	transform: rotate(-145deg);
+}
+
+#reverb .potWrapper .pot hr {
+	width: 3px;
+	height: 28px;
+	border-style: solid;
+	border-color: #D3A30F;
+	color: #D3A30F;
+	background-color: #D3A30F;
+	border-radius: 20px;
+}
+
+#reverbName_R {
+	display: inline-block;
+	padding-left: 25px;
+	margin-bottom: 10px;
+}
+
+#reverbName_R p {
+	font-size: 95px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	color: #D6D6D6;
+}
+
+#reverbName_rest {
+	display: inline-block;
+}
+
+#reverbName_rest p { margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: #ffffff;
+
+}
+
+#reverbControls {
+	margin-top: -25px;
+	padding-left: 25px;
+}
+
+#reverbControls .control {
+	display: inline-block;
+	margin-left: 45px;
+	color: #D3A30F;
+}
+
+#reverbControls .control:first-child {
+	margin-left: 21px;
+}
+
+#reverbControls .control .reverbMinus, .reverbPlus {
+	display: inline-block;
+	cursor: pointer;
+}
+
+#reverbControls .control .reverbPlus {
+	margin-left: 22px;
+}
+
+
+
+
+
+
+/*****************/
+/**** Compresser ***/
+/*****************/
+
+#compressor {
+	margin: auto;
+	margin-left: 220px;
+	border-radius: 10px;
+	border-color: #A6A6A6;
+	background-color: #430D12;
+	text-align: center;
+	/* overRiders */
+	width: 350px;
+	height: 230px;
+	margin-bottom: 15px;
+}
+
+#compressor #bigPot {
+	margin: auto;
+	margin-top: 35px;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	background-color: #110304;
+	transform: rotate(-145deg);
+}
+
+#compressor p {
+	margin: auto;
+	display: inline-block;
+	margin-top: 10px;
+	font-family: Verdana;
+	color: white;
+	font-style: italic; 
+}
+
+#compressor #littleFatty {
+	font-style: italic; 
+	font-family: Helvetica;
+}
+
+#compressor #bigPot hr {
+	width: 3px;
+	height: 72px;
+	border-style: solid;
+	border-color: #ffffff;
+	color: #ffffff;
+	background-color: #ffffff;
+	border-radius: 20px;	
+}
+
+
+
+
+
+
+
+
+
+/*****************/
+/****** EQ *******/
+/*****************/
+
+#eq {
+	border-radius: 15px;
+	border-color: #C79BA9;
+	background-color: #323443;
+}
+
+#eq #left-eq {
+	float: left;
+	padding-top: 30px;
+	padding-left: 10px;
+	width: 440px;
+	height: 100%;
+}
+
+#eq #left-eq #eqHolder {
+	display: inline-block;
+	width: 363px;
+	height: 140px;
+	border: 5px solid white;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+	position: relative;
+}
+
+#eq #left-eq #eqHolder .potWrapper {
+	position: absolute;
+
+}  
+
+#potWrapper0eq {
+	top: 20px;
+	left: 45px;
+}
+
+#potWrapper1eq {
+	top: 20px;
+	left: 145px;
+}
+
+#potWrapper2eq {
+	top: 20px;
+	left: 245px;
+}
+
+#eq #left-eq #eqHolder .potWrapper .pot {
+	margin: auto;
+	border-radius: 100px;
+	height: 66px;
+	width: 66px;
+	background-color: #000000;
+	display: inline-block;
+}
+
+#eq #left-eq #eqHolder .potWrapper .pot hr {
+	width: 3px;
+	height: 28px;
+	border-style: solid;
+	border-color: #ffffff;
+	color: #ffffff;
+	background-color: #ffffff;
+	border-radius: 20px;	
+}
+
+#eq #middle-eq {
+	float: left;
+	width: 150px;
+	height: 100%;
+	padding-top: 37px;
+	padding-left: 10px;
+}
+
+#eq #middle-eq #eqHolder2 {
+	display: inline-block;
+	width: 130px;
+	height: 140px;
+	border: 5px solid white;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	border-radius: 5px;
+	position: relative;
+}
+
+#eq #middle-eq #eqHolder2 .potWrapper {
+	position: absolute;
+	top: 20px;
+	left: 32px;
+} 
+
+#eq #middle-eq #eqHolder2 .potWrapper .pot {
+	margin: auto;
+	border-radius: 100px;
+	height: 66px;
+	width: 66px;
+	background-color: #000000;
+	display: inline-block;
+}
+
+#eq #middle-eq #eqHolder2 .potWrapper .pot hr {
+	width: 3px;
+	height: 28px;
+	border-style: solid;
+	border-color: #ffffff;
+	color: #ffffff;
+	background-color: #ffffff;
+	border-radius: 20px;	
+}
+
+#eqControls {
+	
+}
+
+#eqControls .control {
+	display: inline-block;
+	position: absolute;
+	color: white;
+}
+
+#eqControls .control .eqMinus, .eqPlus {
+	display: inline-block;
+}
+
+#eqControls .control .eqPlus {
+	margin-left: 22px;
+}
+
+#eqControl0 {	
+	top: 95px;
+	left: 58px;
+}
+
+#eqControl1 {
+	top: 95px;
+	left: 158px;
+}
+
+#eqControl2 {
+	top: 95px;
+	left: 258px;
+}
+
+#eqControl3 {
+	top: 95px;
+	left: 46px;
+}
+
+#eq #right-eq {
+	float: left;
+	width: 205px;
+	padding-left: 5px;
+	height: 100%;
+	text-align: center;
+}
+
+#eq #right-eq #eqModuleName {
+	margin-top: 0px;
+	padding-top: 62px;
+	margin-bottom: 20px;
+	font-family: Verdana;
+	font-size: 18px;
+	color: white;
+}
+
+#eq #right-eq .verticalVent {
+	width: 7px;
+	height: 50px;
+	border-style: solid;
+	border-color: #000000;
+	color: #000000;
+	background-color: #000000;
+	border-radius: 25px;
+	display: inline-block;
+	margin-left: 6px;
+}
+
+
