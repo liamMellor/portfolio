@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Liam Mellor Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "styles": "node-sass --include-path scss scss/main.scss index.css",
+    "watch": "nodemon -e scss -x \"npm run styles\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamMellor/portfolio.git"
+  },
+  "keywords": [
+    "Liam",
+    "Mellor",
+    "Liam",
+    "Mellor",
+    "Frontend"
+  ],
+  "author": "Liam Mellor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liamMellor/portfolio/issues"
+  },
+  "homepage": "https://github.com/liamMellor/portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^4.0.0",
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,0 +1,22 @@
+.projects {
+	margin-top: 200px;
+	font-size: 18px;
+	&__title, &__row {
+		animation-delay: 1.5s;
+	}
+	&__title {
+		margin-bottom: 50px;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 50px 0px;
+		border-top: 1px solid rgba(255,129,129,0.5);
+		cursor: pointer;
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 32px;
+	}
+}
