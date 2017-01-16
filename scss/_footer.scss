@@ -1,16 +1,52 @@
 .footer {
 	display: flex;
 	justify-content: space-between;
-	margin: 0px 0px 60px;
+	margin: 0px 25px 75px;
 	animation-delay: 1.5s;
+
+	&__left, &__right {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&__right {
+		justify-content: flex-end;
+	}
+
 	&__item {
-		margin-left: 25px;
-		&:first-child {
-			margin-left: 0px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	@media (min-width: $phone) {
+		&__left {
+			display: block;
+			.footer__item {
+				margin-left: 25px;
+				&:first-child {
+					margin-left: 0px;
+				}
+			}
+		}
+		&__right {
+			flex-flow: row nowrap;
+			.footer__item {
+				margin-bottom: 0px;
+				margin-left: 5px;
+				&:first-child {
+					margin-left: 0px;
+				}
+			}
 		}
 	}
 
 	@media (min-width: $tablet) {
 		margin: 100px 0px 25px
 	}
+}
+
+.footer.home {
+	margin: 100px 0px 60px;
 }
