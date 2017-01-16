@@ -1,12 +1,16 @@
 .footer {
-	margin: 100px 0px 25px;
 	display: flex;
 	justify-content: space-between;
+	margin: 0px 0px 60px;
 	animation-delay: 1.5s;
 	&__item {
 		margin-left: 25px;
 		&:first-child {
 			margin-left: 0px;
 		}
+	}
+
+	@media (min-width: $tablet) {
+		margin: 100px 0px 25px
 	}
 }

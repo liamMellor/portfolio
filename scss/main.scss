@@ -4,11 +4,13 @@
 @import "projects";
 @import "projectPage";
 @import "footer";
+@import "controlls";
 @import "animation";
 
 body {
 	margin: 0px;
-	font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+	position: relative;
+	font-family: $primary-font-family;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	background-color: $background;

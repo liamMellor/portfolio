@@ -1,0 +1,47 @@
+.controlls {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: $background;
+	&__next, &__prev{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 50%;
+		padding: 10px;
+		img {
+			height: 24px;
+		}
+	}
+	&__next {
+		border-right: none;
+	}
+	&__prev {
+		border-left: none;
+	}
+
+	@media (min-width: $tablet) {
+		position: static;
+		display: block;
+		&__next, &__prev {
+			height: 32px;
+			display: block;
+			position: fixed;
+			height: 50px;
+			top: 50%;
+			img {
+				height: 32px;
+			}
+		}
+		&__next {
+			right: 40px;
+		}
+		&__prev {
+			left: 40px;
+		}
+	}
+}

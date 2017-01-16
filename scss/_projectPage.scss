@@ -13,6 +13,7 @@
 			font-size: 11px;
 			line-height: 22px;
 			letter-spacing: 0.5px;
+			border-radius: 5px 5px 0px 0px;
 			text-align: center;
 			&__button {
 				position: absolute;
@@ -36,23 +37,36 @@
 			}
 		}
 		&__image {
-			height: 400px;
+			height: 350px;
 			width: inherit;
+			border-radius: 0px 0px 5px 5px;
 			&.palisades {
 				background: url('images/palisades.png') no-repeat;
-				background-size: cover;
+				background-size: contain;
+				@media (min-width: 1012px) {
+					background-size: cover
+				}
 			}
 			&.mc {
 				background: url('images/mc.png') no-repeat;
-				background-size: cover;
+				background-size: contain;
+				@media (min-width: 1140px) {
+					background-size: cover
+				}
 			}
 			&.zola {
 				background: url('images/zola.png') no-repeat;
-				background-size: cover;
+				background-size: contain;
+				@media (min-width: 1012px) {
+					background-size: cover;
+				}
 			}
 			&.audio {
 				background: url('images/audio.png') no-repeat;
-				background-size: cover;
+				background-size: contain;
+				@media (min-width: 1012px) {
+					background-size: cover;
+				}
 			}
 		}
 	&__description {
@@ -65,4 +79,12 @@
 			}
 		}
 	}
+
+
+	@media (min-width: $phone) {
+		&__image {
+			height: 400px;
+		}
+	}
+
 }
