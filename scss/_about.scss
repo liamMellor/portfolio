@@ -4,10 +4,13 @@
 
 	&__description {
 		padding: 25px;
-		line-height: 1.5;
+		line-height: 1.75;
 	}
 	&__link {
 		color: $primary-light-alt !important;
+		text-decoration: underline;
+	}
+	&__email {
 		text-decoration: underline;
 	}
 
@@ -25,7 +28,7 @@
 			margin-top: 25px;
 		}
 		&__1, &__2, &__3 {
-			line-height: 1.5
+			line-height: 1.75
 		}
 		&__2, &__3 {
 			color: $primary-light-alt;
