@@ -5,6 +5,7 @@
 @import "projectPage";
 @import "footer";
 @import "controlls";
+@import "about";
 @import "animation";
 
 body {
@@ -15,19 +16,26 @@ body {
 	-webkit-font-smoothing: antialiased !important;
 	background-color: $background;
 	color: $primary;
+	a {
+		color: $primary;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+body.alternate {
+	background-color: $background-alt;
+	color: $primary-alt;
+	a {
+		color: $primary-alt;
+	}
 }
 
 #container {
 	padding: 0px 20px;
 	max-width: 1000px;
-}
-
-a {
-	color: $primary;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
 }
 
 @media (min-width: $phone) {
