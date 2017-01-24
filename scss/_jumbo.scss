@@ -1,9 +1,28 @@
 .jumbo {
-	margin-top: 200px;
-	font-size: 110px;
+	margin: 68px 0px 140px;
+	font-size: 58px;
+	line-height: 58px;
 	font-weight: 500;
-	line-height: 110px;
+	font-family: $jumbo-font-family;
 	&__line {
 		animation-delay: 1s;
+	}
+
+	@media (min-width: $phone) {
+		margin: 100px 0px 140px;
+		font-size: 58px;
+		line-height: 58px;
+	}
+
+	@media (min-width: $tablet) {
+		margin: 200px 0px;
+		font-size: 110px;
+		line-height: 110px;
+		&--secondary {
+			font-size: 80px;
+			line-height: 80px;
+			padding-left: 25px;
+
+		}
 	}
 }

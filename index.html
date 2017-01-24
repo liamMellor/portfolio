@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -9,47 +10,62 @@
 		<meta name="description" content="Liam Mellor | New York City based Frontend Developer and UX Developer">
 		<meta name="keywords" content="Liam, Mellor, Liam Mellor, frontend, developer, portfolio, UX, Brooklyn">
 		<meta name="resource-type" content="document">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" src="index.js" async></script>
 	</head>
 	<body>
 		<div id="container">
 			<header class="header">
-				<div class="header__name">
-					<div class="header__name--first animation fadeDown">LIAM</div>
-					<div class="header__name--last animation fadeDown">MELLOR</div>
-				</div>
-				<nav class="header__nav">
-					<ul class="header__nav__list">
-						<li class="header__nav__item animation fadeDown">About</li>
-						<li class="header__nav__item animation fadeDown">Resume</li>
-					</ul>
-				</nav>
+				<a class="header__name animation fadeDown" href="index.html">LIAM MELLOR</a>
+				<ul class="header__nav">
+					<li class="header__nav__item animation fadeDown"><a href="about.html">About</a></li>
+					<li class="header__nav__item animation fadeDown"><a href="LiamMellorResume.pdf">Resume</a></li>
+				</ul>
 			</header>
 			<div class="jumbo">
 				<div class="jumbo__line animation fadeLeft">Frontend</div>
 				<div class="jumbo__line animation fadeRight">Developer</div>
 			</div>
 			<main class="projects">
-				<div class="projects__title animation fadeDown">Some of My Work...</div>
-				<div class="projects__row animation fadeDown">
-					<div class="projects__name">Palisadesbk.com</div>
-					<div class="projects__description">Commercial site for a Broolyn music venue</div>
-				</div>
-				<div class="projects__row animation fadeDown">
-					<div class="projects__name">MenuConnect</div>
-					<div class="projects__description">Embeddable E-Commerce SDK for online ordering</div>
-				</div>
-				<div class="projects__row animation fadeDown">
-					<div class="projects__name">The Everywhere Store™ <br> Dashboard</div>
-					<div class="projects__description">Customer CMS for an E-Commerce platform</div>
-				</div>
-				<div class="projects__row animation fadeDown">
-					<div class="projects__name">In-Browser Mixer</div>
-					<div class="projects__description">Web Audio API mixer concept</div>
+				<div class="projects__title animation fadeDown">Past Projects</div>
+				<div class="projects__rows">
+					<a class="projects__row animation fadeDown" href="menuconnect.html">
+						<div class="projects__innerRow">
+							<div class="projects__name">Menu Connect</div>
+							<div class="projects__description">JavaScript SDK for online ordering</div>
+						</div>
+					</a>
+					<a class="projects__row animation fadeDown" href="zola.html">
+						<div class="projects__innerRow">
+							<div class="projects__name">Zola Books CMS</div>
+							<div class="projects__description">E-Commerce platform customer CMS</div>
+						</div>
+					</a>
+					<a class="projects__row animation fadeDown" href="palisades.html">
+						<div class="projects__innerRow">
+							<div class="projects__name">Palisades Brooklyn</div>
+							<div class="projects__description">Commercial site for a DIY music venue</div>
+						</div>
+					</a>
+					<a class="projects__row animation fadeDown" href="audio.html">
+						<div class="projects__innerRow">
+							<div class="projects__name">In-Browser Mixer</div>
+							<div class="projects__description">Web Audio API mixer concept</div>
+						</div>
+					</a>
 				</div>
 			</main>
+			<footer class="footer home animation fadeDown">
+				<div class="footer__left">
+					<a class="footer__item" target="_blank" href="https://github.com/liamMellor">GitHub</a>
+					<a class="footer__item" target="_blank" href="https://www.linkedin.com/in/liam-mellor-8737328b">LinkedIn</a>
+					<a class="footer__item" target="_blank" href="https://www.instagram.com/liam_mode/">Instagram</a>
+				</div>
+				<div class="footer__right">
+					<div class="footer__item">© 2016 </div>
+					<div class="footer__item"> Liam Mellor</div>
+				</div>
+			</footer>
 		</div>
-
 	</body>
 </html>

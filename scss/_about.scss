@@ -1,0 +1,64 @@
+.about {
+	border-top: 1px solid $primary-light-alt;
+	font-size: $primary-font;
+
+	&__description {
+		padding: 25px;
+		line-height: 1.75;
+	}
+	&__link {
+		color: $primary-light-alt !important;
+		text-decoration: underline;
+	}
+	&__email {
+		text-decoration: underline;
+	}
+
+	&__experience, &__education, &__personal {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 25px 25px 25px;
+		&__title {
+			font-size: 20px;
+			font-weight: 500;
+			letter-spacing: 2px;
+			line-height: 22px;
+		}
+		&__item {
+			margin-top: 25px;
+		}
+		&__1, &__2, &__3 {
+			line-height: 1.75
+		}
+		&__2, &__3 {
+			color: $primary-light-alt;
+			font-size: 16px;
+		}
+	}
+
+	&__education, &__personal {
+		padding-top: 50px;
+	}
+
+	@media (min-width: $phone) {
+		&__experience, &__education, &__personal {
+			flex-flow: row nowrap;
+			&__text {
+				margin-left: 100px;
+			}
+			&__item {
+				margin-top: 0px;
+				margin-bottom: 25px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+		&__education__text {
+			margin-left: 112px;
+		}
+		&__personal__text {
+			margin-left: 126px;
+		}
+	}
+}
