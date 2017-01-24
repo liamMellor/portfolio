@@ -1,8 +1,4 @@
-// Start user at top of page
 window.scrollTo(0,0);
-
-
-// ACTIVE ROWS
 var rowsContainer = document.getElementsByClassName('projects__rows');
 var rowsContainer = rowsContainer[0];
 rowsContainer.addEventListener("mouseover", function() {
