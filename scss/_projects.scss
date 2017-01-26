@@ -6,16 +6,6 @@
 	&__title {
 		margin-bottom: 25px;
 	}
-	&__rows {
-		&--active {
-			.projects__row {
-				color: $primary-light;
-			}
-			.projects__row--active {
-				color: $primary;
-			}
-		}
-	}
 	&__row {
 		display: block;
 		padding: 50px 0px;
@@ -24,6 +14,14 @@
 		color: $primary;
 		text-decoration: none !important;
 		transition: color 0.3s;
+	}
+	&__rows:hover {
+		.projects__row {
+			color: $primary-light;
+		}
+		.projects__row:hover {
+			color: $primary;
+		}
 	}
 	&__innerRow {
 		display: flex;
